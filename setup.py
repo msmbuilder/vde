@@ -21,7 +21,8 @@ def readlist(filename):
 setup(
     name=NAME,
     version=VERSION,
-    author="Carlos X. Hernandez, Hannah K. Wayment-Steele, Mohammad M. Sultan, Brooke E. Husic",
+    author="Carlos X. Hernandez, Hannah K. Wayment-Steele, "
+           "Mohammad M. Sultan, Brooke E. Husic",
     author_email="cxh@stanford.edu",
     url='https://github.com/msmbuilder/%s' % NAME,
     download_url='https://github.com/msmbuilder/%s/tarball/master' % NAME,
