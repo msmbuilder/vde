@@ -43,6 +43,7 @@ class Swish(nn.Module):
 
 
 class Encoder(nn.Module):
+    """Encoder network for dimensionality reduction to latent space"""
     def __init__(self, input_size, output_size=1, hidden_layer_depth=5,
                  hidden_size=1024, activation='Swish', dropout_rate=0.):
         super(Encoder, self).__init__()
@@ -64,6 +65,7 @@ class Encoder(nn.Module):
 
 
 class Lambda(nn.Module):
+    """Application of Gaussian noise to the latent space"""
     def __init__(self, i=1, o=1, scale=1E-3):
         super(Lambda, self).__init__()
 
@@ -80,6 +82,7 @@ class Lambda(nn.Module):
 
 
 class Decoder(nn.Module):
+    """Decoder network for reconstruction from latent space"""
     def __init__(self, output_size, input_size=1, hidden_layer_depth=5,
                  hidden_size=1024, activation='Swish', dropout_rate=0.):
         super(Decoder, self).__init__()
@@ -251,7 +254,6 @@ class VDE(BaseEstimator, nn.Module):
             self.optimizer.step()
 
     def _create_dataset(self, data):
-
         slide = self.lag_time if self.sliding_window else 1
 
         t0 = np.concatenate([d[j::self.lag_time][:-1] for d in data
