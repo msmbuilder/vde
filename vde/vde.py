@@ -64,7 +64,6 @@ class Encoder(nn.Module):
 
 
 class Lambda(nn.Module):
-
     def __init__(self, i=1, o=1, scale=1E-3):
         super(Lambda, self).__init__()
 
