@@ -1,3 +1,7 @@
+# Author: Carlos X. Hernandez <cxh@stanford.edu>
+# Copyright (c) 2017, Stanford University and the Authors
+# All rights reserved.
+
 import numpy as np
 
 import torch.nn as nn

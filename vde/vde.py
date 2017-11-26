@@ -1,3 +1,10 @@
+# Author: Carlos Xavier Hernandez <cxh@stanford.edu>
+# Contributors: Muneeb Sultan <msultan@stanford.edu>
+#               Hannah Wayment-Steele <h.wayment-steele@stanford.edu>
+#               Brooke Husic <brookehusic@gmail.com>,
+# Copyright (c) 2017, Stanford University and the Authors
+# All rights reserved.
+
 import numpy as np
 
 import torch
