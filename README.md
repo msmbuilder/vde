@@ -34,10 +34,17 @@ If you use this code in your work, please cite:
 
 ```bibtex
 @article{Hernandez2017,
-  title={Variational Encoding of Complex Dynamics},
-  author={Hern\'{a}ndez, Carlos X. and Wayment-Steele, Hannah K. and Sultan, Mohammad M. and Husic, Brooke E. and Pande, Vijay S.},
-  journal={arXiv preprint},
-  year={2017}
+   author = {{Hern{\'a}ndez}, C.~X. and {Wayment-Steele}, H.~K. and {Sultan}, M.~M. and 
+	{Husic}, B.~E. and {Pande}, V.~S.},
+    title = "{Variational Encoding of Complex Dynamics}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1711.08576},
+ primaryClass = "stat.ML",
+ keywords = {Statistics - Machine Learning, Physics - Biological Physics, Physics - Chemical Physics, Physics - Computational Physics, Quantitative Biology - Biomolecules},
+     year = 2017,
+    month = nov,
+   adsurl = {http://adsabs.harvard.edu/abs/2017arXiv171108576H},
 }
 
 ```
