@@ -201,6 +201,20 @@ class VDE(BaseEstimator, nn.Module):
 
         self.is_fitted = False
 
+    def __repr__(self):
+        return """VDE(input_size={input_size}, encoder_size={encoder_size}, n_epochs={n_epochs},
+    batch_size={batch_size}, lag_time={lag_time}, sliding_window={sliding_window},
+    autocorr={autocorr}, cuda={cuda})""".format(
+            input_size=self.input_size,
+            encoder_size=self.encoder_size,
+            n_epochs=self.n_epochs,
+            batch_size=self.batch_size,
+            lag_time=self.lag_time,
+            sliding_window=self.sliding_window,
+            autocorr=self.autocorr,
+            cuda=self.use_cuda
+        )
+
     def forward(self, x):
         u = self.encoder(x)
         u_p = self.lmbd(u)
