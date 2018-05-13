@@ -34,6 +34,8 @@ def Layer(i, o, activation=None, p=0., bias=True):
         model += [nn.Tanh()]
     elif activation == 'Swish':
         model += [Swish()]
+    elif type(activation) is str:
+        raise ValueError('{} activation not implemented.'.format(activation))
 
     if p > 0.:
         model += [nn.Dropout(p)]
