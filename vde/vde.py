@@ -36,6 +36,8 @@ def Layer(i, o, activation=None, p=0., bias=True):
         model += [nn.Tanh()]
     elif activation == 'Swish':
         model += [Swish()]
+    elif type(activation) is str:
+        raise ValueError('{} activation not implemented.'.format(activation))
 
     if p > 0.:
         model += [nn.Dropout(p)]
@@ -269,6 +271,20 @@ class VDE(BaseEstimator):
             valid_params[key].set_params(**sub_params)
 
         return self._init_model()
+
+    def __repr__(self):
+        return """VDE(input_size={input_size}, encoder_size={encoder_size}, n_epochs={n_epochs},
+    batch_size={batch_size}, lag_time={lag_time}, sliding_window={sliding_window},
+    autocorr={autocorr}, cuda={cuda})""".format(
+            input_size=self.input_size,
+            encoder_size=self.encoder_size,
+            n_epochs=self.n_epochs,
+            batch_size=self.batch_size,
+            lag_time=self.lag_time,
+            sliding_window=self.sliding_window,
+            autocorr=self.autocorr,
+            cuda=self.cuda
+        )
 
     def _rec(self, x_decoded_mean, x, loss_fn):
         z_mean, z_log_var = self._model.lmbd.mu, self._model.lmbd.log_v
