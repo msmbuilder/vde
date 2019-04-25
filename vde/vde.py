@@ -325,6 +325,8 @@ class VDE(BaseEstimator, nn.Module):
 
     def transform(self, X):
         self.eval()
+        if type(X) is torch.Tensor:
+            X = X.data.numpy()
         if self.is_fitted:
             out = [self._batch_transform(x) for x in X]
             return out
