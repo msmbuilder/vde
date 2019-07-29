@@ -33,18 +33,18 @@ Cite
 If you use this code in your work, please cite:
 
 ```bibtex
-@article{Hernandez2017,
-   author = {{Hern{\'a}ndez}, C.~X. and {Wayment-Steele}, H.~K. and {Sultan}, M.~M. and 
-	{Husic}, B.~E. and {Pande}, V.~S.},
-    title = "{Variational Encoding of Complex Dynamics}",
-  journal = {ArXiv e-prints},
-archivePrefix = "arXiv",
-   eprint = {1711.08576},
- primaryClass = "stat.ML",
- keywords = {Statistics - Machine Learning, Physics - Biological Physics, Physics - Chemical Physics, Physics - Computational Physics, Quantitative Biology - Biomolecules},
-     year = 2017,
-    month = nov,
-   adsurl = {http://adsabs.harvard.edu/abs/2017arXiv171108576H},
+@article{PhysRevE.97.062412,
+  title = {Variational encoding of complex dynamics},
+  author = {Hern\'andez, Carlos X. and Wayment-Steele, Hannah K. and Sultan, Mohammad M. and Husic, Brooke E. and Pande, Vijay S.},
+  journal = {Phys. Rev. E},
+  volume = {97},
+  issue = {6},
+  pages = {062412},
+  numpages = {11},
+  year = {2018},
+  month = {Jun},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevE.97.062412},
+  url = {https://link.aps.org/doi/10.1103/PhysRevE.97.062412}
 }
-
 ```
