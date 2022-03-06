@@ -268,12 +268,12 @@ class VDE(BaseEstimator, nn.Module):
             loss, rec_loss, autocorr_loss, _ = self.compute_loss(X)
 
             if (t + 1) % print_every == 0 and self.verbose:
-                print('Batch %d, loss = %.4f' % (t + 1, loss.data[0]))
+                print('Batch %d, loss = %.4f' % (t + 1, loss.item()))
 
                 if self.autocorr:
                     print('rec_loss = %.4f, '
-                          'autocorr_loss = %.4f' % (rec_loss.data[0],
-                                                    autocorr_loss.data[0]))
+                          'autocorr_loss = %.4f' % (rec_loss.item(),
+                                                    autocorr_loss.item()))
             self.optimizer.step()
 
     def _create_dataset(self, data):
