@@ -63,9 +63,9 @@ def autocorrelation(x):
 
 def initialize_weights(m):
     if (isinstance(m, nn.Linear) or isinstance(m, nn.Conv1d)):
-        init.xavier_uniform(m.weight.data)
+        init.xavier_uniform_(m.weight.data)
     elif isinstance(m, nn.GRU):
         for weights in m.all_weights:
             for weight in weights:
                 if len(weight.size()) > 1:
-                    init.xavier_uniform(weight.data)
+                    init.xavier_uniform_(weight.data)
